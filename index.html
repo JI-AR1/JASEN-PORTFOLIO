@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Jasen Baguio | Portfolio</title>
+    <style>
+        /* CSS Styling */
+        :root {
+            --primary: #007bff;
+            --dark: #121212;
+            --light: #f4f4f4;
+            --gray: #1e1e1e;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 { color: var(--primary); }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            background: var(--gray);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: var(--gray);
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: #252525;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #0a0a0a;
+            margin-top: 50px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://via.placeholder.com/150" alt="John Jasen Baguio" class="profile-img">
+        <h1>John Jasen Baguio</h1>
+        <p>Aspiring Front-End Developer</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="info-grid">
+                <div>
+                    <p><strong>Age:</strong> 23</p>
+                    <p><strong>Birthdate:</strong> Dec 10, 2002</p>
+                </div>
+                <div>
+                    <p><strong>Address:</strong> Mactan LLC</p>
+                    <p><strong>Email:</strong> jasenbaguio1@gmail.com</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px;">
+                I am a passionate aspiring developer from Mactan. My goal is to master modern web technologies 
+                to build beautiful, responsive, and efficient user interfaces.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>A responsive website built with HTML and CSS to showcase my journey and skills.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Weather App</h3>
+                    <p>Using OpenWeather API to display real-time weather updates based on user location.</p>
+                </div>
+                <div class="project-card">
+                    <h3>To-Do List</h3>
+                    <p>A JavaScript-based application that helps users manage daily tasks with local storage.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Contact: 09752211693 | Mactan LLC</p>
+        <button id="topBtn" class="btn" onclick="scrollToTop()">Back to Top</button>
+    </footer>
+
+    <script>
+        // JavaScript Functionality
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Console log for testing
+        console.log("Welcome to John Jasen's Portfolio!");
+    </script>
+
+</body>
+</html>
